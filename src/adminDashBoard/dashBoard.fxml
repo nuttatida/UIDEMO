@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashBoard.dashBoardController">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="802.0" style="-fx-background-color: #00b0ff;">
+         <children>
+            <Label layoutX="24.0" layoutY="11.0" text="Welcome !!!">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="64.0" prefHeight="437.0" prefWidth="192.0" style="-fx-background-color: #18ffff;">
+         <children>
+            <Button layoutX="20.0" layoutY="55.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" text="Add" />
+            <Button layoutX="20.0" layoutY="112.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" text="Edit" />
+            <Button layoutX="20.0" layoutY="170.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" text="Delete" />
+            <Button layoutX="20.0" layoutY="230.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" text="Layout" />
+            <FontAwesomeIconView glyphName="PLUS" layoutX="57.0" layoutY="82.0" size="24" />
+            <FontAwesomeIconView glyphName="EDIT" layoutX="54.0" layoutY="140.0" size="24" />
+            <FontAwesomeIconView glyphName="CLOSE" layoutX="57.0" layoutY="198.0" size="24" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="58.0" layoutY="258.0" size="24" />
+         </children>
+      </Pane>
+      <TableView layoutX="201.0" layoutY="163.0" prefHeight="271.0" prefWidth="444.0">
+        <columns>
+          <TableColumn prefWidth="104.0" text="ID" />
+          <TableColumn prefWidth="103.0" text="Name" />
+            <TableColumn text="Protition" />
+            <TableColumn prefWidth="82.0" text="Email" />
+            <TableColumn prefWidth="74.0" text="Salary" />
+        </columns>
+      </TableView>
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="201.0" layoutY="141.0" size="25" wrappingWidth="15.428561389446259" />
+      <JFXTextField layoutX="239.0" layoutY="119.0" prefHeight="28.0" prefWidth="229.0" />
+   </children>
+</AnchorPane>
