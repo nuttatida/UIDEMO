@@ -6,27 +6,57 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffd149;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="362.0" style="-fx-background-color: #64ffda;">
+      <AnchorPane prefHeight="400.0" prefWidth="336.0" style="-fx-background-color: #ffa000;">
          <children>
-            <FontAwesomeIconView glyphName="CAMERA_RETRO" layoutX="160.0" layoutY="142.0" size="50" text="" />
-            <Label layoutX="90.0" layoutY="187.0" text="Welcome to MIT SAIYAI">
+            <FontAwesomeIconView fill="#9a0808" glyphName="GITHUB_ALT" layoutX="110.0" layoutY="150.0" size="120" wrappingWidth="116.0" />
+            <Label layoutX="65.0" layoutY="193.0" text="Welcome to MIT-SAIYAI" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="0.080952380952381" endY="1.0" startX="0.08095238095238096">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Label>
-            <Label layoutX="14.0" layoutY="354.0" text="CopyRight @ SAW NUTTATIDA" />
+            <Label layoutX="14.0" layoutY="360.0" text="CopyRight @ SAM PURIWAT" textFill="#0513fa" />
          </children>
       </AnchorPane>
-      <JFXTextField fx:id="username" labelFloat="true" layoutX="428.0" layoutY="88.0" promptText="username" />
-      <JFXPasswordField fx:id="password" layoutX="428.0" layoutY="140.0" promptText="password" />
-      <FontAwesomeIconView glyphName="USER" layoutX="394.0" layoutY="109.0" size="20" text="" />
-      <FontAwesomeIconView glyphName="LOCK" layoutX="396.0" layoutY="158.0" size="20" />
-      <JFXButton fx:id="btnLogin" layoutX="440.0" layoutY="200.0" onAction="#Login" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #64ffda;" text="Login" />
-      <Label layoutX="376.0" layoutY="352.0" prefHeight="20.0" prefWidth="58.0" text="DB Status" />
-      <Label fx:id="dbStatus" layoutX="434.0" layoutY="354.0" prefHeight="17.0" prefWidth="123.0" />
+      <JFXTextField fx:id="username" focusColor="#9a1a03" labelFloat="true" layoutX="410.0" layoutY="95.0" promptText="username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#9a1a03" labelFloat="true" layoutX="410.0" layoutY="145.0" promptText="password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <FontAwesomeIconView fill="#9a1a03" glyphName="USER" layoutX="385.0" layoutY="116.0" size="22" />
+      <FontAwesomeIconView fill="#9a1a03" glyphName="LOCK" layoutX="386.0" layoutY="168.0" size="23" />
+      <JFXButton fx:id="btnLogin" layoutX="410.0" layoutY="188.0" onAction="#Login" onKeyPressed="#Login" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #ffa000;" text="Login" textFill="#9a1a03">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="345.0" layoutY="360.0" text="DB Status: " textFill="#9a1a03">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="dbStatus" layoutX="410.0" layoutY="360.0" prefHeight="17.0" prefWidth="157.0" textFill="#9a1a03">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

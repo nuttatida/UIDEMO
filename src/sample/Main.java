@@ -13,6 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
         primaryStage.setTitle("MIT SAIYAI APP");
         primaryStage.setScene(new Scene(root, 600, 375));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
